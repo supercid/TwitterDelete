@@ -35,6 +35,13 @@ Now run TwitterDelete:
 
 If you fork this PR you can also used the [GitHub Actions scheduled workflow](https://github.com/MikeMcQuaid/TwitterDelete/blob/master/.github/workflows/scheduled.yml) combined with secrets on your fork to run this automatically.
 
+### Running with Docker
+
+In case you don't wanna spend time installing ruby deps, use a docker image to install and run the script with the example below:
+```
+docker run --rm -v $(pwd):/apps alpine/bundle:2.4.2 bash -c "bundle install && ./twitter_delete.rb --user Super_Cid --days 0 --favs 200 --force"
+```
+
 ## Status
 
 Works for deleting relevant tweet and likes. I delete my old tweets and am not actively working on improving this but I will accept pull requests.
